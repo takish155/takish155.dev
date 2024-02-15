@@ -2,9 +2,9 @@
 
 import React from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { usePathname, useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
+import { useMenuContext } from "@/context/MenuContext";
 
 const MobileThemeSelection = ({
   theme,
@@ -15,7 +15,8 @@ const MobileThemeSelection = ({
   dark: string;
   light: string;
 }) => {
-  const { theme: currentTheme, setTheme } = useTheme();
+  const { setTheme, theme: currentTheme } = useTheme();
+  const { setOpen } = useMenuContext() || {};
   return (
     <Dialog>
       <DialogTrigger>{theme}</DialogTrigger>
@@ -23,11 +24,24 @@ const MobileThemeSelection = ({
         <ul className="w-[100vh]">
           <Button
             className="text-2xl p-6 border-b-2 border-gray-300 mr-4"
-            onClick={() => setTheme("light")}
+            onClick={() => {
+              setTheme("light");
+              if (currentTheme === "dark") {
+                setOpen!(false);
+              }
+            }}
           >
             {light}
           </Button>
-          <Button className="text-2xl p-6" onClick={() => setTheme("dark")}>
+          <Button
+            className="text-2xl p-6"
+            onClick={() => {
+              setTheme("dark");
+              if (currentTheme === "light") {
+                setOpen!(false);
+              }
+            }}
+          >
             {dark}
           </Button>
         </ul>
