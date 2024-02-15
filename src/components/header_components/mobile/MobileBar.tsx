@@ -32,7 +32,7 @@ const MobileBar = ({
   return (
     <>
       {open && (
-        <nav className="w-[100vw] h-[100vh] top-0 sticky bg-inherit flex items-center">
+        <nav className="w-[100vw] h-[100vh] top-0 fixed bg-inherit flex items-center">
           <ul className="w-full">
             <li
               className={`hover:bg-primary pointer p-4 text-center text-3xl ${
