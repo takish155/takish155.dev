@@ -110,10 +110,10 @@ export const Header = () => {
     <div className="max-w-[900px] relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       {locale === "en" ? (
         <>
-          <h2 className="text-[2.8rem] font-bold dark:text-white">
+          <h2 className="text-header font-bold dark:text-white">
             My passion for <br /> programming
           </h2>
-          <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+          <p className="max-w-2xl text-paragraph md:text-xl mt-8 dark:text-neutral-200">
             I am dedicated to enhancing my skills as a developer through
             challenging and beautiful projects, aiming for continuous growth and
             improvement.
@@ -121,10 +121,10 @@ export const Header = () => {
         </>
       ) : (
         <>
-          <h2 className="text-[2.8rem] font-bold dark:text-white">
+          <h2 className="text-header font-bold dark:text-white">
             プログラミングの情熱さ
           </h2>
-          <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+          <p className="max-w-2xl text-paragraph mt-8 dark:text-neutral-200">
             ウェブエンジニアとしての能力を高めるために、難しいや美しいプロジェクトに取り組み、常に成長と向上を目指しています。
           </p>
         </>

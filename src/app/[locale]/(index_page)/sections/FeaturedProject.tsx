@@ -8,7 +8,7 @@ const FeaturedProject = () => {
   const t = useTranslations("HomePage");
   return (
     <section className="w-[95%] max-w-[900px] mx-auto">
-      <h2 className="text-4xl font-semibold mb-8">
+      <h2 className="text-header font-semibold mb-8">
         &#x1F527; {t("featuredProject")}
       </h2>
       <Project4 />

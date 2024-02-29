@@ -27,6 +27,11 @@ const config = {
       fontFamily: {
         poppins: ["var(--font-poppins)"],
       },
+      fontSize: {
+        header: "min(7vw,2.25rem)",
+        miniheader: "min(5vw,1.75rem)",
+        paragraph: "min(3.5vw,1.25rem)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
