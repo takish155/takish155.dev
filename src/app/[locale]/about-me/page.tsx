@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import React from "react";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const Page = () => {
   const t = useTranslations("AboutMePage");
@@ -33,9 +34,6 @@ const Page = () => {
           <h2 className="font-semibold text-[2.35rem] pt-[1rem] mb-5">
             {t("heading2")}
           </h2>
-          <p className="text-muted-foreground mb-4 italic text-lg">
-            &#127881; {t("update")}
-          </p>
           <ul
             className=" tablet:w-full list-disc pl-5 text-lg text-muted-foreground"
             id="toDoList"
@@ -72,6 +70,7 @@ const Page = () => {
           </ul>
         </section>
       </article>
+      <BackgroundBeams />
     </main>
   );
 };

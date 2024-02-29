@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* * {
+  border: 1px solid red;
+} */
+
 html {
   max-width: 100vw !important;
+  overflow-x: hidden !important;
 }
 
 .DropdownMenuTrigger::after {

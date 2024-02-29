@@ -10,7 +10,7 @@ const MenuIconButton = () => {
   return (
     <MenuIcon
       aria-label="menu-button"
-      className="hover:cursor-pointer sm:hidden"
+      className="hover:cursor-pointer md:hidden"
       size={50}
       onClick={() => setOpen!(true)}
     />

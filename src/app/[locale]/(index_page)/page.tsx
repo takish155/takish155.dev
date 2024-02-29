@@ -4,14 +4,15 @@ import Projects from "./sections/Projects";
 import MiniIntroduction from "./sections/MiniIntroduction";
 import ContactSection from "./sections/ContactSection";
 import { getTranslations } from "next-intl/server";
+import FeaturedProject from "./sections/FeaturedProject";
 
 const page = () => {
   return (
     <main>
       <HeroSection />
-      <MiniIntroduction />
       <Projects />
-      {/* <TechstackSection /> */}
+      <MiniIntroduction />
+      <FeaturedProject />
       <ContactSection />
     </main>
   );

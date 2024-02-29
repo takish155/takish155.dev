@@ -5,10 +5,12 @@ import Header from "../../components/header_components/Header";
 import Footer from "./Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { MenuContextProvider } from "@/context/MenuContext";
+import { TracingBeam } from "@/components/ui/tracing-beam";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +28,7 @@ export default function LocaleLayout({
   return (
     <html lang={locale} className={poppins.className}>
       <body>
-        <ThemeProvider attribute="class" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <MenuContextProvider>
             <Header />
           </MenuContextProvider>

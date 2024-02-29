@@ -74,9 +74,6 @@ const MobileBar = ({
             <li className="hover:bg-primary pointer p-4 text-center text-3xl">
               <MobileLanguageSelection />
             </li>
-            <li className="hover:bg-primary pointer p-4 text-center text-3xl">
-              <MobileThemeSelection theme={theme} dark={dark} light={light} />
-            </li>
             <li
               className="hover:bg-primary pointer p-4 text-center text-3xl hover:cursor-pointer"
               onClick={() => setOpen!(false)}

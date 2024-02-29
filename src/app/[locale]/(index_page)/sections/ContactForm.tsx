@@ -8,6 +8,7 @@ import useContactForm from "@/custom_hooks/useContactForm";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 import React from "react";
+import { Meteors } from "@/components/ui/meteor-effect";
 
 const ContactForm = ({
   name,

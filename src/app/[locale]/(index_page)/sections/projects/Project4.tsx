@@ -28,17 +28,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import ProjectSectionAnimation from "@/animation/ProjectSectionAnimation";
-import ProjectImageHoverAnimation from "@/animation/ProjectImageHoverAnimation";
+import { BackgroundGradient } from "@/components/ui/glowingcard";
 
 const Project4 = () => {
   const t = useTranslations("HomePage");
   return (
-    <ProjectSectionAnimation>
-      <Card className="w-full flex-wrap flex gap-[5%] justify-center items-center mb-12">
-        <CardContent className="w-[55%] max-sm:w-[85%] max-sm:mt-6">
-          <Carousel opts={{ loop: true }}>
-            <ProjectImageHoverAnimation>
+    <div className="mb-[5rem]">
+      <BackgroundGradient className="rounded-[22px] p-1 bg-slate-950 flex content-center">
+        <section className="w-full flex-wrap flex gap-[5%] justify-center items-center my-auto">
+          <CardContent className="w-[55%] max-sm:w-[85%] max-sm:mt-6">
+            <Carousel opts={{ loop: true }}>
               <CarouselContent>
                 <CarouselItem>
                   <Image src={sceenshot1} alt="Zeetaa" />
@@ -50,128 +49,128 @@ const Project4 = () => {
                   <Image src={screenshot3} alt="Zeetaa" />
                 </CarouselItem>
               </CarouselContent>
-            </ProjectImageHoverAnimation>
-            <CarouselNext />
-            <CarouselPrevious className="sm:hidden" />
-          </Carousel>
-        </CardContent>
-        <CardHeader className="w-[40%] max-sm:w-full">
-          <CardTitle className="mb-2">
-            <h3 className="flex justify-between">
-              &#x1F4F1; Zeetaa{" "}
-              <div className="flex gap-2">
-                <Link
-                  className="text-2xl"
-                  href="https://zeetaa.vercel.app/en"
-                  passHref
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="sr-only">Visit website</span>
-                  <ExternalLinkIcon />
-                </Link>
-                <Link
-                  href="https://github.com/Takish155/Zeetaa"
-                  passHref
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="sr-only">View source code in Github</span>
-                  <Code />
-                </Link>
-              </div>
-            </h3>
-          </CardTitle>
+              <CarouselNext />
+              <CarouselPrevious className="sm:hidden" />
+            </Carousel>
+          </CardContent>
+          <CardHeader className="w-[40%] max-sm:w-full">
+            <CardTitle className="mb-2">
+              <h3 className="flex justify-between">
+                &#x1F4F1; Zeetaa{" "}
+                <div className="flex gap-2">
+                  <Link
+                    className="text-2xl"
+                    href="https://zeetaa.vercel.app/en"
+                    passHref
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="sr-only">Visit website</span>
+                    <ExternalLinkIcon />
+                  </Link>
+                  <Link
+                    href="https://github.com/Takish155/Zeetaa"
+                    passHref
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="sr-only">View source code in Github</span>
+                    <Code />
+                  </Link>
+                </div>
+              </h3>
+            </CardTitle>
 
-          <CardDescription>
-            <p className="text-lg">{t("zeetaaDescription")}</p>
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="w-full flex gap-4 flex-wrap justify-center">
-          <Card className="p-[0.65rem] rounded-xl flex gap-2">
-            <Image
-              src={ts}
-              alt="Typescript"
-              width={25}
-              height={25}
-              className="max-w-[25px] max-h-[25px] h-auto w-auto"
-            />
+            <CardDescription>
+              <p className="text-lg">{t("zeetaaDescription")}</p>
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="w-full flex gap-4 flex-wrap justify-center">
+            <Card className="p-[0.65rem] rounded-xl flex gap-2">
+              <Image
+                src={ts}
+                alt="Typescript"
+                width={25}
+                height={25}
+                className="max-w-[25px] max-h-[25px] h-auto w-auto"
+              />
 
-            <p>Typescript</p>
-          </Card>
-          <Card className="p-[0.65rem] rounded-xl flex gap-2">
-            <Image src={react} alt="React" width={25} height={25} />
-            <p>React</p>
-          </Card>
-          <Card className="p-[0.65rem] rounded-xl flex gap-2">
-            <Image
-              src={next}
-              alt="Next.js"
-              width={25}
-              height={25}
-              className="max-w-[25px] max-h-[25px] h-auto w-auto"
-            />
+              <p>Typescript</p>
+            </Card>
+            <Card className="p-[0.65rem] rounded-xl flex gap-2">
+              <Image src={react} alt="React" width={25} height={25} />
+              <p>React</p>
+            </Card>
+            <Card className="p-[0.65rem] rounded-xl flex gap-2">
+              <Image
+                src={next}
+                alt="Next.js"
+                width={25}
+                height={25}
+                className="max-w-[25px] max-h-[25px] h-auto w-auto"
+              />
 
-            <p>Next</p>
-          </Card>
-          <Card className="p-[0.65rem] rounded-xl flex gap-2">
-            <Image
-              src={prisma}
-              alt="Prisma"
-              width={25}
-              height={25}
-              className="max-w-[25px] max-h-[25px] h-auto w-auto"
-            />
+              <p>Next</p>
+            </Card>
+            <Card className="p-[0.65rem] rounded-xl flex gap-2">
+              <Image
+                src={prisma}
+                alt="Prisma"
+                width={25}
+                height={25}
+                className="max-w-[25px] max-h-[25px] h-auto w-auto"
+              />
 
-            <p>Prisma</p>
-          </Card>
-          <Card className="p-[0.65rem] rounded-xl flex gap-2">
-            <Image
-              src={nextauth}
-              alt="NextAuth"
-              width={25}
-              height={25}
-              className="max-w-[25px] max-h-[25px] h-auto w-auto"
-            />
+              <p>Prisma</p>
+            </Card>
+            <Card className="p-[0.65rem] rounded-xl flex gap-2">
+              <Image
+                src={nextauth}
+                alt="NextAuth"
+                width={25}
+                height={25}
+                className="max-w-[25px] max-h-[25px] h-auto w-auto"
+              />
 
-            <p>NextAuth</p>
-          </Card>
-          <Card className="p-[0.65rem] rounded-xl flex gap-2">
-            <Image
-              src={mongodb}
-              alt="MongoDB"
-              width={25}
-              height={25}
-              className="max-w-[25px] max-h-[25px] h-auto w-auto"
-            />
+              <p>NextAuth</p>
+            </Card>
+            <Card className="p-[0.65rem] rounded-xl flex gap-2">
+              <Image
+                src={mongodb}
+                alt="MongoDB"
+                width={25}
+                height={25}
+                className="max-w-[25px] max-h-[25px] h-auto w-auto"
+              />
 
-            <p>MongoDB</p>
-          </Card>
-          <Card className="p-[0.65rem] rounded-xl flex gap-2">
-            <Image
-              src={pusher}
-              alt="Pusher"
-              width={25}
-              height={25}
-              className="max-w-[25px] max-h-[25px] h-auto w-auto"
-            />
+              <p>MongoDB</p>
+            </Card>
+            <Card className="p-[0.65rem] rounded-xl flex gap-2">
+              <Image
+                src={pusher}
+                alt="Pusher"
+                width={25}
+                height={25}
+                className="max-w-[25px] max-h-[25px] h-auto w-auto"
+              />
 
-            <p>Pusher</p>
-          </Card>
-          <Card className="p-[0.65rem] rounded-xl flex gap-2">
-            <Image
-              src={nextintl}
-              alt="NextIntl"
-              width={25}
-              height={25}
-              className="max-w-[25px] max-h-[25px] h-auto w-auto"
-            />
+              <p>Pusher</p>
+            </Card>
+            <Card className="p-[0.65rem] rounded-xl flex gap-2">
+              <Image
+                src={nextintl}
+                alt="NextIntl"
+                width={25}
+                height={25}
+                className="max-w-[25px] max-h-[25px] h-auto w-auto"
+              />
 
-            <p>NextIntl</p>
-          </Card>
-        </CardContent>
-      </Card>
-    </ProjectSectionAnimation>
+              <p>NextIntl</p>
+            </Card>
+          </CardContent>
+        </section>
+      </BackgroundGradient>
+    </div>
   );
 };
 

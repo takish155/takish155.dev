@@ -14,18 +14,18 @@ import mui from "@/../public/images/techstack_logos/mui.png";
 import pusher from "@/../public/images/techstack_logos/pusher.jpg";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import { Meteors } from "@/components/ui/meteor-effect";
 
 const MiniIntroduction = () => {
   const t = useTranslations("HomePage");
   return (
-    <article className="max-sm:my-[8rem] w-[95%] max-w-[900px] mx-auto mb-8">
+    <article className="max-sm:my-[8rem] w-[95%] max-w-[900px] mx-auto my-[20rem] relative overflow-x-hidden">
       <section className="mb-7">
         <h2 className="font-semibold text-[2.35rem] pt-[1rem] mb-5">
           &#x1F91D; {t("introductionHeader")}
         </h2>
-        <p className="text-muted-foreground tablet:w-full text-lg w-[75%] max-sm:w-full mb-3">
-          {t("longIntroduction1")}
-        </p>
+        <TextGenerateEffect words={t("longIntroduction1")} />
       </section>
       <section className="grid sm:grid-cols-2">
         <section className="mb-[1.5rem] max-sm:w-[95%]">
@@ -48,6 +48,7 @@ const MiniIntroduction = () => {
           </h3>
         </section>
       </section>
+      <Meteors number={60} />
       <section className="mb-[1.5rem] w-full">
         <h2 className="font-bold text-2xl mb-2 text-center">
           {t("skillsHeading")}
@@ -184,7 +185,6 @@ const MiniIntroduction = () => {
               className="max-w-[25px] max-h-[25px] h-auto w-auto"
             />
 
-            {/* projects isnt part of the card */}
             <p id="projects">Next-Intl</p>
           </Card>
         </CardContent>
