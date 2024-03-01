@@ -3,7 +3,6 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { TypewriterEffect } from "@/components/ui/type-writer-effect";
-import { WavyBackground } from "@/components/ui/wavy-background";
 import { SparklesCore } from "@/components/ui/sparkle-preview";
 
 const HeroSection = () => {
@@ -37,7 +36,7 @@ const HeroSection = () => {
         {locale === "ja" && "です。"}
       </h2>
       <TypewriterEffect
-        className="mb-5"
+        className="mb-5 mx-auto"
         words={t("introduction2")
           .split(" ")
           .map((word) => {
@@ -46,7 +45,6 @@ const HeroSection = () => {
             };
           })}
       />
-
       <section className="flex gap-5 justify-center flex-wrap">
         <Link href={`/${locale}/#projects`} passHref>
           <Button>{t("viewProject")}</Button>
