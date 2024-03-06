@@ -22,7 +22,7 @@ const HeroSection = () => {
           particleColor="#FFFFFF"
         />
       </div>
-      <h2 className="text-[min(3vw,1.55rem)] font-semibold text-center mb-5">
+      <h2 className="text-[min(3vw,1.55rem)] font-semibold text-center mb-5 relative">
         &#128075;
         {t("hello")}
       </h2>
@@ -45,7 +45,7 @@ const HeroSection = () => {
             };
           })}
       />
-      <section className="flex gap-5 justify-center flex-wrap">
+      <section className="flex gap-5 justify-center flex-wrap relative">
         <Link href={`/${locale}/#projects`} passHref>
           <Button>{t("viewProject")}</Button>
         </Link>

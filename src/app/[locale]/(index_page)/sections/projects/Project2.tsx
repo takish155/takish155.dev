@@ -40,16 +40,44 @@ const Project2 = () => {
             <Carousel opts={{ loop: true }}>
               <CarouselContent>
                 <CarouselItem>
-                  <Image src={screenshot1} alt="iFindGallery" />
+                  <Link
+                    href="https://ifindgallery.netlify.app/"
+                    passHref
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={screenshot1} alt="iFindGallery" />
+                  </Link>
                 </CarouselItem>
                 <CarouselItem>
-                  <Image src={screenshot2} alt="iFindGallery" />
+                  <Link
+                    href="https://ifindgallery.netlify.app/"
+                    passHref
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={screenshot2} alt="iFindGallery" />
+                  </Link>
                 </CarouselItem>
                 <CarouselItem>
-                  <Image src={screenshot3} alt="iFindGallery" />
+                  <Link
+                    href="https://ifindgallery.netlify.app/"
+                    passHref
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={screenshot3} alt="iFindGallery" />
+                  </Link>
                 </CarouselItem>
                 <CarouselItem>
-                  <Image src={screenshot4} alt="iFindGallery" />
+                  <Link
+                    href="https://ifindgallery.netlify.app/"
+                    passHref
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={screenshot4} alt="iFindGallery" />
+                  </Link>
                 </CarouselItem>
               </CarouselContent>
               <CarouselPrevious className="sm:hidden" />

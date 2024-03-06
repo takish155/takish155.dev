@@ -40,13 +40,34 @@ const Project4 = () => {
             <Carousel opts={{ loop: true }}>
               <CarouselContent>
                 <CarouselItem>
-                  <Image src={sceenshot1} alt="Zeetaa" />
+                  <Link
+                    href="https://zeetaa.vercel.app/en"
+                    passHref
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={sceenshot1} alt="Zeetaa" />
+                  </Link>
                 </CarouselItem>
                 <CarouselItem>
-                  <Image src={screenshot2} alt="Zeetaa" />
+                  <Link
+                    href="https://zeetaa.vercel.app/en"
+                    passHref
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={screenshot2} alt="Zeetaa" />
+                  </Link>
                 </CarouselItem>
                 <CarouselItem>
-                  <Image src={screenshot3} alt="Zeetaa" />
+                  <Link
+                    href="https://zeetaa.vercel.app/en"
+                    passHref
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={screenshot3} alt="Zeetaa" />
+                  </Link>
                 </CarouselItem>
               </CarouselContent>
               <CarouselNext />

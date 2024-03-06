@@ -16,16 +16,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { Meteors } from "@/components/ui/meteor-effect";
+import { Spotlight } from "@/components/ui/spotlight";
 
 const MiniIntroduction = () => {
   const t = useTranslations("HomePage");
   return (
     <>
-      <div className="w-[100vw] relative overflow-x-hidden">
-        {" "}
-        <Meteors number={60} />
-      </div>
-      <article className="max-sm:my-[8rem] w-[95%] max-w-[900px] mx-auto my-[20rem] relative overflow-x-hidden">
+      <Spotlight />
+      <article className=" max-sm:my-[8rem] w-[95%] max-w-[900px] mx-auto my-[20rem] relative overflow-x-hidden">
         <section className="mb-7">
           <h2 className="font-semibold text-header pt-[1rem] mb-5">
             &#x1F91D; {t("introductionHeader")}

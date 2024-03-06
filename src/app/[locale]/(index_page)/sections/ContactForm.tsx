@@ -5,10 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import useContactForm from "@/custom_hooks/useContactForm";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-
 import React from "react";
-import { Meteors } from "@/components/ui/meteor-effect";
 
 const ContactForm = ({
   name,
@@ -20,6 +17,7 @@ const ContactForm = ({
   minMessageError,
   minNameError,
   submit,
+  contact,
 }: {
   name: string;
   message: string;
@@ -30,6 +28,7 @@ const ContactForm = ({
   minMessageError: string;
   maxMessageError: string;
   submit: string;
+  contact: string;
 }) => {
   const {
     message: contactMessage,
@@ -40,7 +39,13 @@ const ContactForm = ({
     handleSubmit,
   } = useContactForm();
   return (
-    <form onSubmit={handleSubmit((data) => onSubmit(data))}>
+    <form
+      onSubmit={handleSubmit((data) => onSubmit(data))}
+      className="w-[95%] max-w-sm "
+    >
+      <h2 className="w-full mb-10 font-semibold text-header">
+        &#x1F4E9; {contact}
+      </h2>
       {contactMessage.message && (
         <p
           data-test={contactMessage.type}
@@ -53,7 +58,7 @@ const ContactForm = ({
           {contactMessage.message}
         </p>
       )}
-      <div className="grid w-full max-w-sm items-center gap-1.5 mb-5">
+      <div className="grid w-full items-center gap-1.5 mb-5">
         <Label htmlFor="name">{name}</Label>
         <Input type="name" id="name" placeholder={name} {...register("name")} />
         {errors.name && (
@@ -64,7 +69,7 @@ const ContactForm = ({
           </p>
         )}
       </div>
-      <div className="grid w-full max-w-sm items-center gap-1.5 mb-5">
+      <div className="grid w-full items-center gap-1.5 mb-5">
         <Label htmlFor="email">{email}</Label>
         <Input
           type="email"
@@ -74,7 +79,7 @@ const ContactForm = ({
         />
         {errors.email && <p className="text-red-500 mt-3">{emailError}</p>}
       </div>
-      <div className="grid w-full max-w-sm items-center gap-1.5 mb-5">
+      <div className="grid w-full items-center gap-1.5 mb-5">
         <Label htmlFor="message">{message}</Label>
         <Textarea placeholder={message} id="message" {...register("message")} />
         {errors.message && (

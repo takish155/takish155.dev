@@ -73,13 +73,34 @@ const Project3 = () => {
             <Carousel opts={{ loop: true }}>
               <CarouselContent>
                 <CarouselItem>
-                  <Image src={screenshot1} alt="Zeetaa" />
+                  <Link
+                    href="https://gamiplex.vercel.app/"
+                    passHref
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={screenshot1} alt="Zeetaa" />
+                  </Link>
                 </CarouselItem>
                 <CarouselItem>
-                  <Image src={screenshot2} alt="Zeetaa" />
+                  <Link
+                    href="https://gamiplex.vercel.app/"
+                    passHref
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={screenshot2} alt="Zeetaa" />
+                  </Link>
                 </CarouselItem>
                 <CarouselItem>
-                  <Image src={screenshot3} alt="Zeetaa" />
+                  <Link
+                    href="https://gamiplex.vercel.app/"
+                    passHref
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image src={screenshot3} alt="Zeetaa" />
+                  </Link>
                 </CarouselItem>
               </CarouselContent>
               <CarouselPrevious />
