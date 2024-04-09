@@ -1,13 +1,13 @@
 import { useTranslations } from "next-intl";
 import React from "react";
-import Project4 from "./projects/Project4";
-import Project3 from "./projects/Project3";
-import Project2 from "./projects/Project2";
+import Project4 from "./Project4";
+import Project3 from "./Project3";
+import Project2 from "./Project2";
 
-const FeaturedProject = () => {
+const FeaturedProjectSection = () => {
   const t = useTranslations("HomePage");
   return (
-    <section className="w-[95%] max-w-[900px] mx-auto">
+    <section className="w-[95%] max-w-[1080px] mx-auto">
       <h2 className="text-header font-semibold mb-8">
         &#x1F527; {t("featuredProject")}
       </h2>
@@ -18,4 +18,4 @@ const FeaturedProject = () => {
   );
 };
 
-export default FeaturedProject;
+export default FeaturedProjectSection;

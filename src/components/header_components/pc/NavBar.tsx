@@ -20,7 +20,7 @@ const NavBar = ({
   const pathName = usePathname();
 
   return (
-    <nav className="flex items-center gap-9 max-sm:hidden">
+    <nav className="flex items-center gap-9 max-md:hidden">
       <div>
         <ul className="flex gap-[1.2rem] text-[1.15rem] font-extralight">
           <li

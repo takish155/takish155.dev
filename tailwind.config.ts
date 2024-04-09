@@ -28,8 +28,9 @@ const config = {
         poppins: ["var(--font-poppins)"],
       },
       fontSize: {
-        header: "min(7vw,2.25rem)",
-        miniheader: "min(5vw,1.75rem)",
+        heroHeader: "min(7vw,3.35rem)",
+        header: "min(7vw,1.75rem)",
+        miniheader: "min(5vw,1.55rem)",
         paragraph: "min(3.5vw,1.25rem)",
       },
       colors: {

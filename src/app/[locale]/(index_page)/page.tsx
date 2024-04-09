@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import HeroSection from "./sections/HeroSection";
-import Projects from "./sections/Projects";
-import MiniIntroduction from "./sections/MiniIntroduction";
-import ContactSection from "./sections/ContactSection";
+import HeroSection from "./hero_section/_HeroSection";
 import { getTranslations } from "next-intl/server";
-import FeaturedProject from "./sections/FeaturedProject";
+import FeaturedProjectSection from "./featured_project_section/_FeaturedProjectSection";
+import ContactSection from "./contact_section/_ContactSection";
+import ParallaxSection from "./parallax_section/_ParalaxSection";
+import IntroductionSection from "./introduction_section/_IntroductionSection";
 
 const page = () => {
   return (
     <main>
       <HeroSection />
-      <Projects />
-      <MiniIntroduction />
-      <FeaturedProject />
+      <ParallaxSection />
+      <IntroductionSection />
+      <FeaturedProjectSection />
       <ContactSection />
     </main>
   );

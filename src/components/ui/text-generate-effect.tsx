@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useLocale } from "next-intl";
-import { Quote } from "lucide-react";
 
 export const TextGenerateEffect = ({
   words,
@@ -26,7 +25,7 @@ export const TextGenerateEffect = ({
         delay: locale !== "ja" ? stagger(0.2) : stagger(0.03),
       }
     );
-  }, [scope.current]);
+  }, [animate, locale]);
 
   const renderWords = () => {
     return (

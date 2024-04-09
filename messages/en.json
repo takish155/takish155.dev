@@ -23,7 +23,7 @@
     "project": "Projects",
     "viewProject": "View Project",
     "contactMe": "Contact Me",
-    "zeetaaDescription": "Experience Zeetaa: a dynamic social app with robust user interaction, seamless authentication, MongoDB-driven search, real-time chat, and notifications. Designed with CSS/HTML styling by my partner and NextJS backend by me, it also features a bonus translation option in English or Japanese for global inclusivity.",
+    "zeetaaDescription": "Zeetaa is a social media platform that redefines the essence of online interaction. With a keen emphasis on user-friendly design, our application highlights core functionalities such as posting, adding friends and real-time chat feature.",
     "gamiplexDescription": "Enter the world of Gamiplex: a web app for discovering, adding, and sharing favorite games. Boasting user authentication, CRUD capabilities, and a seamless game search using RAWG API, with MongoDB handling user data, NextAuth ensuring authentication, and Prisma for efficient database queries.",
     "iFindGalleryDescription": "Discover the magic of iFindGallery, a web app powered by the Unsplash API for seamless image searches. Explore images by name, view in full size, download with a click, and dive deeper into the artist's world by accessing their portfolio page – all in one captivating platform.",
     "iMoviFDescription": "iMoviF is a web application that allows users to search for movies. It uses the TMDB API to fetch movies respectively. It also has a search function that allows users to search for movies by name and view the movie's details. You can also view the movie's trailer. on top of that, you can also view the movie's actor and see movie that they also acted on.",

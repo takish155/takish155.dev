@@ -5,6 +5,7 @@ import Header from "../../components/header_components/Header";
 import Footer from "./Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { MenuContextProvider } from "@/context/MenuContext";
+import { NextIntlClientProvider, useMessages } from "next-intl";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -12,9 +13,15 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-export const metadata: Metadata = {
-  title: "takish155.dev",
-  description: "A portfolio website for takish155",
+export const metadata = {
+  metadataBase: new URL("https://www.takish155.dev"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/en",
+      ja: "/ja",
+    },
+  },
 };
 
 export default function LocaleLayout({
@@ -24,15 +31,19 @@ export default function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  const messages = useMessages();
+
   return (
     <html lang={locale} className={poppins.className}>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <MenuContextProvider>
-            <Header />
-          </MenuContextProvider>
-          {children}
-          <Footer />
+          <NextIntlClientProvider messages={messages}>
+            <MenuContextProvider>
+              <Header />
+            </MenuContextProvider>
+            {children}
+            <Footer />
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -1,7 +1,7 @@
 import { expect, test } from "vitest";
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import HeroSection from "../app/[locale]/(index_page)/sections/HeroSection";
+import HeroSection from "../app/[locale]/(index_page)/hero_section/_HeroSection";
 
 test("Page", () => {
   render(<HeroSection />);
