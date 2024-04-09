@@ -1,16 +1,7 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import React from "react";
-import ContactForm from "./ContactForm";
 import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/button";
-import { Github, Instagram, Link, Mail } from "lucide-react";
-import { Meteors } from "@/components/ui/meteor-effect";
+import { Github, Instagram, Mail } from "lucide-react";
+import ContactForm from "../contact_section/ContactForm";
 
 const ContactSection = () => {
   const t = useTranslations("ContactPage");
