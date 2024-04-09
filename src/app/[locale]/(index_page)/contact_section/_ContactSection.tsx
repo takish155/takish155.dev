@@ -28,6 +28,7 @@ const ContactSection = () => {
             minMessageError={t("minMessageError")}
             minNameError={t("minNameError")}
             submit={t("submit")}
+            contact={t("contact")}
           />
         </div>
       </section>
