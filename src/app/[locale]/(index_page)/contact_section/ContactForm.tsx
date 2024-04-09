@@ -17,7 +17,6 @@ const ContactForm = ({
   minMessageError,
   minNameError,
   submit,
-  contact,
 }: {
   name: string;
   message: string;
@@ -28,7 +27,6 @@ const ContactForm = ({
   minMessageError: string;
   maxMessageError: string;
   submit: string;
-  contact: string;
 }) => {
   const {
     message: contactMessage,
@@ -43,9 +41,6 @@ const ContactForm = ({
       onSubmit={handleSubmit((data) => onSubmit(data))}
       className="w-[95%] max-w-sm "
     >
-      <h2 className="w-full mb-10 font-semibold text-header">
-        &#x1F4E9; {contact}
-      </h2>
       {contactMessage.message && (
         <p
           data-test={contactMessage.type}

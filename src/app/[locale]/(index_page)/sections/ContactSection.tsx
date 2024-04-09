@@ -18,7 +18,6 @@ const ContactSection = () => {
           minMessageError={t("minMessageError")}
           minNameError={t("minNameError")}
           submit={t("submit")}
-          contact={t("header")}
         />
         <section className="mt-10 flex flex-col justify-center">
           <div className="mb-5">
