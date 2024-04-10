@@ -25,7 +25,6 @@ const Header = async () => {
       <CardHeader className="max-md:p-0 max-md:py-6 max-md:px-2">
         <h1 className="text-[min(5vw,1.7rem)] font-semibold mb-[0.5rem] flex items-center gap-2">
           <MenuIconButton />
-          &#128187;
           <Link href="/" passHref>
             {t("title")}
           </Link>

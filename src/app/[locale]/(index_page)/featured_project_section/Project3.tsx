@@ -14,7 +14,7 @@ const Project3 = () => {
 
   return (
     <FromRightAnimation>
-      <section className="w-full flex-wrap flex gap-[5%] justify-center items-center my-auto mb-[5rem]">
+      <section className="w-full flex-wrap flex gap-[5%] justify-center items-center my-auto mb-[5rem] max-md:flex-col-reverse">
         <CardHeader className="w-[40%] max-md:w-full">
           <ProjectCardTitle
             project={{

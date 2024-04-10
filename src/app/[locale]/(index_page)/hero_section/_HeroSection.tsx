@@ -9,7 +9,6 @@ const HeroSection = () => {
 
   return (
     <section className="h-[75vh] flex flex-col justify-center w-[100vw] relative">
-      <HeroSparkles />
       <h2 className="text-miniheader font-semibold text-center mb-5 z-40">
         &#128075;
         {t("hello")}

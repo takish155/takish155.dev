@@ -20,7 +20,7 @@ const FromLeftAnimation = ({ children }: { children: ReactNode }) => {
 
   return (
     <motion.section
-      className="mb-[25rem]"
+      className="mb-[15rem]"
       initial={{
         opacity: 0,
         x: isMobile ? 0 : -200,

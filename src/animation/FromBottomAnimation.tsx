@@ -4,7 +4,6 @@ import React, { ReactNode, useEffect, useRef, useState } from "react";
 import { motion, useAnimationControls, useInView } from "framer-motion";
 
 const FromBottomAnimation = ({ children }: { children: ReactNode }) => {
-  const isMobile = window.innerWidth <= 768;
   const ref = useRef(null);
   const control = useAnimationControls();
   const inView = useInView(ref, {
@@ -21,7 +20,7 @@ const FromBottomAnimation = ({ children }: { children: ReactNode }) => {
     <motion.div
       initial={{
         opacity: 0,
-        y: 300,
+        y: 150,
         filter: "blur(3px)",
       }}
       variants={{

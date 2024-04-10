@@ -12,7 +12,7 @@ const IntroductionSection = () => {
     <FromBottomAnimation>
       <article className="max-md:my-[8rem] w-[95%] max-w-[1080px] mx-auto my-[20rem] overflow-x-hidden">
         <h2 className="font-semibold text-header pt-[1rem] mb-5">
-          &#x1F91D; {t("introductionHeader")}
+          {t("introductionHeader")}
         </h2>
         <section className="mb-7">
           <TextGenerateEffect words={t("longIntroduction1")} />

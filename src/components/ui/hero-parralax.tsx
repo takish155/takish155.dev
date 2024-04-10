@@ -11,6 +11,7 @@ import {
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useLocale } from "next-intl";
+import HeroSection from "@/app/[locale]/(index_page)/hero_section/_HeroSection";
 
 export const HeroParallax = ({
   products,
@@ -59,7 +60,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[300vh] pb-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -104,33 +105,7 @@ export const HeroParallax = ({
 };
 
 export const Header = () => {
-  const locale = useLocale();
-
-  return (
-    <div className="max-w-[900px] relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      {locale === "en" ? (
-        <>
-          <h2 className="text-header font-bold dark:text-white">
-            My passion for <br /> programming
-          </h2>
-          <p className="max-w-2xl text-paragraph md:text-xl mt-8 dark:text-neutral-200">
-            I am dedicated to enhancing my skills as a developer through
-            challenging and beautiful projects, aiming for continuous growth and
-            improvement.
-          </p>
-        </>
-      ) : (
-        <>
-          <h2 className="text-header font-bold dark:text-white">
-            プログラミングの情熱さ
-          </h2>
-          <p className="max-w-2xl text-paragraph mt-8 dark:text-neutral-200">
-            ウェブエンジニアとしての能力を高めるために、難しいや美しいプロジェクトに取り組み、常に成長と向上を目指しています。
-          </p>
-        </>
-      )}
-    </div>
-  );
+  return <HeroSection />;
 };
 
 export const ProductCard = ({

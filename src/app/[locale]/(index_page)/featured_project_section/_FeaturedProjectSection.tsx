@@ -7,10 +7,8 @@ import Project2 from "./Project2";
 const FeaturedProjectSection = () => {
   const t = useTranslations("HomePage");
   return (
-    <section className="w-[95%] max-w-[1080px] mx-auto">
-      <h2 className="text-header font-semibold mb-8">
-        &#x1F527; {t("featuredProject")}
-      </h2>
+    <section className="w-[95%] max-w-[1080px] mx-auto" id="projects">
+      <h2 className="text-header font-semibold mb-8">{t("featuredProject")}</h2>
       <Project4 />
       <Project3 />
       <Project2 />

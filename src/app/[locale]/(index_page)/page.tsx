@@ -9,7 +9,6 @@ import IntroductionSection from "./introduction_section/_IntroductionSection";
 const page = () => {
   return (
     <main>
-      <HeroSection />
       <ParallaxSection />
       <IntroductionSection />
       <FeaturedProjectSection />

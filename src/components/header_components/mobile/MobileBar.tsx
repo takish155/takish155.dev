@@ -1,13 +1,10 @@
 "use client";
 
 import { useMenuContext } from "@/context/MenuContext";
-import { MenuIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
-import LanguageSelection from "../pc/LanguageSelection";
+import React from "react";
 import MobileLanguageSelection from "./MobileLanguageSelection";
-import MobileThemeSelection from "./MobileThemeSelection";
 
 const MobileBar = ({
   home,
