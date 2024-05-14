@@ -10,7 +10,9 @@ const HeroHeading = () => {
       {t("im")} <span className="font-extrabold text-primary">{t("name")}</span>
       , <br className="lg:hidden" />
       {locale === "en" && " a"}
-      <span className="px-4 font-extrabold text-red-500">{t("job")}</span>
+      <span className="px-4 font-extrabold bg-primary text-white rounded-2xl ml-4">
+        {t("job")}
+      </span>
       {locale === "ja" && <br className="md:hidden" />}
       {locale === "ja" && "です。"}
     </h2>

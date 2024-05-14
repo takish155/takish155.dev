@@ -1,16 +1,8 @@
 "use client";
 
 import React, { useMemo } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useSpring,
-  MotionValue,
-} from "framer-motion";
-import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
-import { useLocale } from "next-intl";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { StaticImageData } from "next/image";
 import HeroSection from "@/app/[locale]/(index_page)/hero_section/_HeroSection";
 import ProductCard from "./product-card";
 

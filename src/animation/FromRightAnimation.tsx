@@ -4,12 +4,11 @@ import React, { ReactNode, useEffect, useRef } from "react";
 import { motion, useAnimationControls, useInView } from "framer-motion";
 
 const FromRightAnimation = ({ children }: { children: ReactNode }) => {
-  const isMobile = window.innerWidth <= 768;
   const ref = useRef(null);
   const control = useAnimationControls();
   const inView = useInView(ref, {
     once: true,
-    margin: isMobile ? "0px 0px 0px 0px" : "0px 400px -50px 0px",
+    margin: "0px 400px -50px 0px",
   });
 
   useEffect(() => {
@@ -23,8 +22,8 @@ const FromRightAnimation = ({ children }: { children: ReactNode }) => {
       className="mb-[15rem]"
       initial={{
         opacity: 0,
-        x: isMobile ? 0 : 200,
-        y: isMobile ? 200 : 0,
+        x: 200,
+        y: 0,
         filter: "blur(3px)",
       }}
       variants={{

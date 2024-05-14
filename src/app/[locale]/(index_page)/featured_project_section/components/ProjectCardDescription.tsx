@@ -12,10 +12,10 @@ const ProjectCardDescription = ({
   return (
     <CardDescription>
       <FromBottomText delay={0.5}>
-        <p className="text-lg mb-6 font-light">{description}</p>
+        <h5 className="text-lg mb-6 font-light">{description}</h5>
       </FromBottomText>
       <FromBottomText delay={0.8}>
-        <p className="text-base">{skillUsed}</p>
+        <h5 className="text-base">{skillUsed}</h5>
       </FromBottomText>
     </CardDescription>
   );

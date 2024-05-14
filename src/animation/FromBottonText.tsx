@@ -10,7 +10,6 @@ const FromBottomText = ({
   children: ReactNode;
   delay: number;
 }) => {
-  const isMobile = window.innerWidth <= 768;
   const ref = useRef(null);
   const control = useAnimationControls();
   const inView = useInView(ref, {

@@ -4,15 +4,7 @@ import React from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
-const ThemeMode = ({
-  theme,
-  light,
-  dark,
-}: {
-  theme: string;
-  light: string;
-  dark: string;
-}) => {
+const ThemeMode = () => {
   const { setTheme, theme: currentTheme } = useTheme();
 
   if (currentTheme === "light") {

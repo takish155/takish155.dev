@@ -4,7 +4,6 @@ import "./../globals.css";
 import Header from "../../components/header_components/Header";
 import Footer from "./Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { MenuContextProvider } from "@/context/MenuContext";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 
 const poppins = Poppins({
@@ -38,9 +37,7 @@ export default function LocaleLayout({
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark">
           <NextIntlClientProvider messages={messages}>
-            <MenuContextProvider>
-              <Header />
-            </MenuContextProvider>
+            <Header />
             {children}
             <Footer />
           </NextIntlClientProvider>
