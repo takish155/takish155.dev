@@ -1,7 +1,9 @@
 import React from "react";
-import ContactForm from "./ContactForm";
 import { useTranslations } from "next-intl";
 import FromBottomAnimation from "@/animation/FromBottomAnimation";
+import dynamic from "next/dynamic";
+
+const ContactForm = dynamic(() => import("./ContactForm"));
 
 const ContactSection = () => {
   const t = useTranslations("ContactPage");

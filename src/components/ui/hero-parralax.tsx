@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import {
   motion,
   useScroll,
@@ -12,6 +12,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { useLocale } from "next-intl";
 import HeroSection from "@/app/[locale]/(index_page)/hero_section/_HeroSection";
+import ProductCard from "./product-card";
 
 export const HeroParallax = ({
   products,
@@ -22,9 +23,9 @@ export const HeroParallax = ({
     thumbnail: StaticImageData;
   }[];
 }) => {
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
+  const firstRow = useMemo(() => products.slice(0, 5), [products]);
+  const secondRow = useMemo(() => products.slice(5, 10), [products]);
+  const thirdRow = useMemo(() => products.slice(10, 15), [products]);
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -57,6 +58,46 @@ export const HeroParallax = ({
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
     springConfig
   );
+  const firstRowCards = useMemo(
+    () =>
+      firstRow.map((product) => {
+        return (
+          <ProductCard
+            product={product}
+            translate={translateX}
+            key={product.title}
+          />
+        );
+      }),
+    [firstRow, translateX]
+  );
+  const secondRowCards = useMemo(
+    () =>
+      secondRow.map((product) => {
+        return (
+          <ProductCard
+            product={product}
+            translate={translateXReverse}
+            key={product.title}
+          />
+        );
+      }),
+    [secondRow, translateXReverse]
+  );
+  const thirdRowCards = useMemo(
+    () =>
+      thirdRow.map((product) => {
+        return (
+          <ProductCard
+            product={product}
+            translate={translateX}
+            key={product.title}
+          />
+        );
+      }),
+    [thirdRow, translateX]
+  );
+
   return (
     <div
       ref={ref}
@@ -73,31 +114,13 @@ export const HeroParallax = ({
         className=""
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          {firstRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
-          ))}
+          {firstRowCards}
         </motion.div>
         <motion.div className="flex flex-row  mb-20 space-x-20 ">
-          {secondRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateXReverse}
-              key={product.title}
-            />
-          ))}
+          {secondRowCards}
         </motion.div>
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          {thirdRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
-          ))}
+          {thirdRowCards}
         </motion.div>
       </motion.div>
     </div>
@@ -106,44 +129,4 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return <HeroSection />;
-};
-
-export const ProductCard = ({
-  product,
-  translate,
-}: {
-  product: {
-    title: string;
-    link: string;
-    thumbnail: StaticImageData | string;
-  };
-  translate: MotionValue<number>;
-}) => {
-  return (
-    <motion.div
-      style={{
-        x: translate,
-      }}
-      whileHover={{
-        y: -20,
-      }}
-      key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
-    >
-      <Link
-        href={product.link}
-        className="block group-hover/product:shadow-2xl "
-      >
-        <Image
-          src={product.thumbnail}
-          className="object-cover my-auto absolute h-auto w-full inset-0"
-          alt={product.title}
-        />
-      </Link>
-      <div className="absolute inset-0 h-full w-full opacity-0 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
-        {product.title}
-      </h2>
-    </motion.div>
-  );
 };

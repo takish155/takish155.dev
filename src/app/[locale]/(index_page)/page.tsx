@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
-import HeroSection from "./hero_section/_HeroSection";
 import { getTranslations } from "next-intl/server";
-import FeaturedProjectSection from "./featured_project_section/_FeaturedProjectSection";
-import ContactSection from "./contact_section/_ContactSection";
 import ParallaxSection from "./parallax_section/_ParalaxSection";
-import IntroductionSection from "./introduction_section/_IntroductionSection";
+import dynamic from "next/dynamic";
+
+const IntroductionSection = dynamic(
+  () => import("./introduction_section/_IntroductionSection")
+);
+const FeaturedProjectSection = dynamic(
+  () => import("./featured_project_section/_FeaturedProjectSection")
+);
+const ContactSection = dynamic(
+  () => import("./contact_section/_ContactSection")
+);
 
 const page = () => {
   return (

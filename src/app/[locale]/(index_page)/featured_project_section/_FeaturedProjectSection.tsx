@@ -1,8 +1,10 @@
 import { useTranslations } from "next-intl";
 import React from "react";
-import Project4 from "./Project4";
-import Project3 from "./Project3";
-import Project2 from "./Project2";
+import dynamic from "next/dynamic";
+
+const Project2 = dynamic(() => import("./Project2"));
+const Project3 = dynamic(() => import("./Project3"));
+const Project4 = dynamic(() => import("./Project4"));
 
 const FeaturedProjectSection = () => {
   const t = useTranslations("HomePage");

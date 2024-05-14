@@ -2,8 +2,10 @@ import { useTranslations } from "next-intl";
 import React from "react";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import FromBottomAnimation from "@/animation/FromBottomAnimation";
-import SelfDetails from "./SelfDetails";
-import SelfSkills from "./SelfSkills";
+import dynamic from "next/dynamic";
+
+const SelfDetails = dynamic(() => import("./SelfDetails"));
+const SelfSkills = dynamic(() => import("./SelfSkills"));
 
 const IntroductionSection = () => {
   const t = useTranslations("HomePage");
