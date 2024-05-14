@@ -1,6 +1,5 @@
 import { useLocale, useTranslations } from "next-intl";
 import { TypewriterEffect } from "@/components/ui/type-writer-effect";
-import HeroSparkles from "./HeroSparkles";
 import HeroActionButtons from "./HeroActionButtons";
 import HeroHeading from "./HeroHeading";
 
