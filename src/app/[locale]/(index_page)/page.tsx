@@ -15,7 +15,7 @@ const ContactSection = dynamic(
 
 const page = () => {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <ParallaxSection />
       <IntroductionSection />
       <FeaturedProjectSection />
