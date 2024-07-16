@@ -13,9 +13,7 @@ const ContactSection = () => {
     >
       <div className="w-[50%] max-md:w-full mb-8">
         <h2 className="font-semibold text-header mb-4 mt-8">{t("header")}</h2>
-        <p className="text-muted-foreground text-paragraph">
-          {t("description")}
-        </p>
+        <p className="text-muted-foreground text-sm">{t("description")}</p>
       </div>
       <div className="w-[45%] max-md:w-full">
         <ContactForm

@@ -19,7 +19,7 @@ const SelfSkillCard = ({
         className="max-w-[25px] max-h-[25px] h-auto w-auto"
       />
 
-      <p>{skillName}</p>
+      <p className="text-sm">{skillName}</p>
     </Card>
   );
 };

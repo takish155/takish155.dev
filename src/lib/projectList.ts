@@ -13,6 +13,8 @@ import zeetaa4 from "@/../public/images/zeetaa_screenshots/zeetaa4.png";
 import budgetplex1 from "@/../public/images/budgetplex_screenshots/screenshot1.png";
 import budgetplex2 from "@/../public/images/budgetplex_screenshots/screenshot2.png";
 import budgetplex3 from "@/../public/images/budgetplex_screenshots/screenshot3.png";
+import omniparts1 from "@/../public/images/omniparts_screenshots/screenshot1.png";
+import omniparts2 from "@/../public/images/omniparts_screenshots/screenshot2.png";
 
 export const projectList = [
   {
@@ -31,6 +33,11 @@ export const projectList = [
     thumbnail: zeetaa1,
   },
   {
+    title: "Omniparts",
+    link: "https://omniparts.vercel.app/",
+    thumbnail: omniparts1,
+  },
+  {
     title: "iFindGallery",
     link: "https://ifindgallery.netlify.app/",
     thumbnail: ifindgallery2,
@@ -39,6 +46,11 @@ export const projectList = [
     title: "Gamiplex",
     link: "https://gamiplex.vercel.app/",
     thumbnail: gamiplex2,
+  },
+  {
+    title: "Omniparts",
+    link: "https://omniparts.vercel.app/",
+    thumbnail: omniparts2,
   },
   {
     title: "Zeetaa",

@@ -4,13 +4,16 @@ import ParallaxSection from "./parallax_section/_ParalaxSection";
 import dynamic from "next/dynamic";
 
 const IntroductionSection = dynamic(
-  () => import("./introduction_section/_IntroductionSection")
+  () => import("./introduction_section/_IntroductionSection"),
+  { ssr: false }
 );
 const FeaturedProjectSection = dynamic(
-  () => import("./featured_project_section/_FeaturedProjectSection")
+  () => import("./featured_project_section/_FeaturedProjectSection"),
+  { ssr: false }
 );
 const ContactSection = dynamic(
-  () => import("./contact_section/_ContactSection")
+  () => import("./contact_section/_ContactSection"),
+  { ssr: false }
 );
 
 const page = () => {

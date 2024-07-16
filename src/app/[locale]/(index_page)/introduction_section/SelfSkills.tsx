@@ -10,6 +10,8 @@ import tailwind from "@/../public/images/techstack_logos/tailwind.png";
 import nextintl from "@/../public/images/techstack_logos/nextinlt.png";
 import mui from "@/../public/images/techstack_logos/mui.png";
 import pusher from "@/../public/images/techstack_logos/pusher.jpg";
+import stripe from "@/../public/images/techstack_logos/stripe.png";
+import shadcn from "@/../public/images/techstack_logos/shadcn.png";
 import React from "react";
 import { CardContent } from "@/components/ui/card";
 import { useTranslations } from "next-intl";
@@ -34,6 +36,8 @@ const SelfSkills = () => {
         <SelfSkillCard skillImageSrc={nextintl} skillName="NextIntl" />
         <SelfSkillCard skillImageSrc={mui} skillName="Material-UI" />
         <SelfSkillCard skillImageSrc={pusher} skillName="Pusher" />
+        <SelfSkillCard skillImageSrc={stripe} skillName="Stripe" />
+        <SelfSkillCard skillImageSrc={shadcn} skillName="Shadcn UI" />
       </CardContent>
     </section>
   );

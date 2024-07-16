@@ -35,7 +35,7 @@ export default function LocaleLayout({
   return (
     <html lang={locale} className={poppins.className}>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider attribute="class">
           <NextIntlClientProvider messages={messages}>
             <Header />
             {children}

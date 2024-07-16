@@ -23,6 +23,7 @@
     "project": "Projects",
     "viewProject": "View Project",
     "contactMe": "Contact Me",
+    "omnipartsDescription": "Omniparts, an E-Commerce website built with modern technologies such as Nextjs, Supabase and Stripe. It features seamless cart management, checkout proccess with Stripe, and user authentication. On top of that, it also has admin functionalities such as adding, updating, and deleting products.",
     "budgetplexDescription": "Take control of your budget with ease with Budgetplex, a budget-tracking app where you can record your expenses, income, incoming bills, work shifts, and financial goals to get your desired results whether it be your expected income, what's been eating your wallet, etc.",
     "zeetaaDescription": "Zeetaa is a social media platform that redefines the essence of online interaction. With a keen emphasis on user-friendly design, our application highlights core functionalities such as posting, adding friends and real-time chat feature.",
     "gamiplexDescription": "Enter the world of Gamiplex: a web app for discovering, adding, and sharing favorite games. Boasting user authentication, CRUD capabilities, and a seamless game search using RAWG API, with MongoDB handling user data, NextAuth ensuring authentication, and Prisma for efficient database queries.",

@@ -34,7 +34,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="dark:text-white text-black opacity-0"
+              className="dark:text-white text-black text-muted-foreground"
             >
               {word}
               {locale !== "ja" ? " " : ""}
@@ -46,11 +46,9 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div
-      className={cn("text-foreground font-medium text-paragraph", className)}
-    >
+    <div className={cn("font-light", className)}>
       <div className="mt-4">
-        <div className=" dark:text-white text-black text-paragraph leading-snug tracking-wide">
+        <div className=" dark:text-white text-black text-sm text-muted-foreground">
           {renderWords()}
         </div>
       </div>
